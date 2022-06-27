@@ -48,6 +48,9 @@ winget install -e --id Zoom.Zoom;
 
 winget install -e --id VideoLAN.VLC;
 
+
+Intel.IntelDriverAndSupportAssistant
+
 ---------------
 #Hidden Apps AutoRun
 https://www.nirsoft.net/utils/whatinstartup-x64.zip
