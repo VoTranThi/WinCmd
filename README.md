@@ -5,11 +5,7 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 iwr -useb https://raw.githubusercontent.com/WinTweakers/WindowsToolbox/main/run.ps1 | iex
 
 
-iwr -outf C:\ET-AIO.bat https://github.com/semazurek/ET-All-in-One-Optimizer/releases/download/4.7/ET-AIO.bat
-
-C:\ET-AIO.bat
-
-clear
+iwr -outf C:\ET-AIO.bat https://github.com/semazurek/ET-All-in-One-Optimizer/releases/download/4.7/ET-AIO.bat | cmd /c 'C:\ET-AIO.bat'
 
 
 -------------------
