@@ -8,6 +8,7 @@ iwr -useb https://raw.githubusercontent.com/WinTweakers/WindowsToolbox/main/run.
 iwr -outf C:\ET-AIO.bat https://github.com/semazurek/ET-All-in-One-Optimizer/releases/download/4.7/ET-AIO.bat | cmd /c 'C:\ET-AIO.bat'
 
 
+iwr -useb https://christitus.com/win | iex
 -------------------
 #Advance system Settings: sysdm.cpl
 
