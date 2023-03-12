@@ -17,7 +17,7 @@ iwr -useb https://christitus.com/win | iex
 
 Get-AppXPackage *WindowsStore* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 
-
+https://github.com/kkkgo/LTSC-Add-MicrosoftStore/releases/tag/2019
 -------------------
 #Winget Install 
 https://aka.ms/getwinget
