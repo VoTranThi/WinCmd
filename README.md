@@ -29,7 +29,19 @@ winget upgrade --all
 
 winget install -e --id geeksoftwareGmbH.PDF24Creator
 
-winget install -e --id XP8CDJNZKFM06W
+winget install -e --id Microsoft.VCRedist.2010.x86
+winget install -e --id Microsoft.VCRedist.2010.x64
+winget install -e --id Microsoft.VCRedist.2012.x86
+winget install -e --id Microsoft.VCRedist.2012.x64
+winget install -e --id Microsoft.VCRedist.2013.x86
+winget install -e --id Microsoft.VCRedist.2013.x64
+winget install -e --id Microsoft.VCRedist.2015+.x86
+winget install -e --id Microsoft.VCRedist.2015+.x64
+winget install -e --id Microsoft.DotNet.DesktopRuntime.6
+winget install -e --id Oracle.JavaRuntimeEnvironment
+
+winget install -e --id OpenJS.NodeJS.LTS
+
 winget install -e --id Evolus.Pencil
 winget install -e --id 9PGCV4V3BK4W
 winget install -e --id mcmilk.7zip-zstd
@@ -49,31 +61,21 @@ winget install -e --id Postman.Postman
 winget install -e --id Rufus.Rufus
 winget install -e --id RARLab.WinRAR
 winget install -e --id Zoom.Zoom
-winget install -e --id Microsoft.VCRedist.2013.x64
 winget install -e --id ALCPU.CoreTemp
 winget install -e --id SoftDeluxe.FreeDownloadManager
 winget install -e --id voidtools.Everything
-winget install -e --id Microsoft.VCRedist.2010.x64
 winget install -e --id Microsoft.PowerToys
-winget install -e --id Oracle.JavaRuntimeEnvironment
-winget install -e --id Microsoft.VCRedist.2012.x86
-winget install -e --id Microsoft.VCRedist.2015+.x86
 winget install -e --id Google.Chrome
 winget install -e --id Google.Drive
-winget install -e --id XP8CDJNZKFM06W
-winget install -e --id Microsoft.SQLServerManagementStudio
-winget install -e --id Microsoft.DotNet.DesktopRuntime.6
-winget install -e --id Microsoft.VCRedist.2013.x86
 winget install -e --id VideoLAN.VLC
 winget install -e --id TortoiseGit.TortoiseGit
 winget install -e --id VMware.WorkstationPlayer
 winget install -e --id DucFabulous.UltraViewer
 winget install -e --id Microsoft.WebDeploy
-winget install -e --id OpenJS.NodeJS.LTS
-winget install -e --id Microsoft.VCRedist.2010.x86
-winget install -e --id Microsoft.VCRedist.2012.x64
-winget install -e --id Microsoft.VCRedist.2015+.x64
 winget install -e --id Microsoft.PowerBI
+winget install -e --id Microsoft.SQLServerManagementStudio
+winget install -e --id XP8CDJNZKFM06W
+
 
 Intel.IntelDriverAndSupportAssistant
 
