@@ -163,7 +163,11 @@ Now you need to find the Windows directory, its normally c: or d: you can type: 
 Cài win không cần usb https://www.youtube.com/watch?v=EYa7iTgb6es
 
 
---- wifi pwd ---
+------
+
+#wifi pwd
+
+
 (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)}  | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize
 
 
