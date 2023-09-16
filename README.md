@@ -177,3 +177,6 @@ Cài win không cần usb https://www.youtube.com/watch?v=EYa7iTgb6es
 ------
 Tạo file dung lượng lớn :
 fsutil file createnew "D:\file100GB.dat" 107374182400
+---------
+Backup Setting windows Apps
+https://github.com/builtbybel/CloneApp
