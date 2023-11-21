@@ -141,6 +141,16 @@ DISM /Online /Cleanup-Image /ScanHealth
 
 DISM /Online /Cleanup-Image /RestoreHealth
 
+
+-------------
+
+HDD Drive:
+
+defrag c:
+
+C:\windows\SYSTEM32\cleanmgr.exe /dC
+
+
 ---------------
 
 
