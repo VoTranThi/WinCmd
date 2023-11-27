@@ -198,6 +198,15 @@ Check wifi password: for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show
 bcdedit /set {default} safeboot network
 
 
+------------
+
+# Backup all Driver
+
+dism /online /export-driver /destination:D:\Backup
+
+
+
+
 
 ------
 Tạo file dung lượng lớn :
