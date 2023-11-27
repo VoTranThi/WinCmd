@@ -28,6 +28,12 @@ https://github.com/kkkgo/LTSC-Add-MicrosoftStore/releases/tag/2019
 https://aka.ms/getwinget
 
 
+#install Chocolatey
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('http://internal/odata/repo/ChocolateyInstall.ps1'))
+
+
+
 winget upgrade --all
 
 ---------------
