@@ -217,3 +217,9 @@ fsutil file createnew "D:\file100GB.dat" 107374182400
 ---------
 Backup Setting windows Apps
 https://github.com/builtbybel/CloneApp
+
+-------
+# lấy danh sách các tệp đã được chỉnh sửa sau ngày 14/08/2024, theo đúng cấu trúc thư mục con
+
+Get-ChildItem -Path "C:\path\to\your\directory" -Recurse | Where-Object { $_.LastWriteTime -gt "2024-08-14" } | Select-Object FullName
+
