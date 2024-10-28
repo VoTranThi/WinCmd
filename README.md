@@ -223,3 +223,7 @@ https://github.com/builtbybel/CloneApp
 
 Get-ChildItem -Path "C:\path\to\your\directory" -Recurse | Where-Object { $_.LastWriteTime -gt "2024-08-14" } | Select-Object FullName
 
+--------
+#Install Cloudflared
+winget install --id Cloudflare.cloudflared
+cloudflared tunnel --url http://localhost:3000
