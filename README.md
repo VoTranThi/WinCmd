@@ -225,5 +225,16 @@ Get-ChildItem -Path "C:\path\to\your\directory" -Recurse | Where-Object { $_.Las
 
 --------
 #Install Cloudflared
+
 winget install --id Cloudflare.cloudflared
+
 cloudflared tunnel --url http://localhost:3000
+
+
+# ngrok tunnel 
+
+winget install  Ngrok.Ngrok  --ignore-security-hash
+
+ngrok config add-authtoken NGROK_AUTHTOKEN
+
+ngrok http 7860
