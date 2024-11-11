@@ -243,3 +243,13 @@ winget install  Ngrok.Ngrok  --ignore-security-hash
 ngrok config add-authtoken NGROK_AUTHTOKEN
 
 ngrok http 7860
+
+# extend trial windows server evaluation ( max = 6 times)
+
+PS> slmgr -dlv
+
+PS> slmgr -rearm
+
+PS> shutdown -r -t 0
+
+PS> 
