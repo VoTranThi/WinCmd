@@ -27,6 +27,11 @@ https://github.com/kkkgo/LTSC-Add-MicrosoftStore/releases/tag/2019
 https://aka.ms/getwinget
 
 
+PS> Install-Script -Name winget-install
+PS> winget-install
+
+
+
 #install Chocolatey
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
