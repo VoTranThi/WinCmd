@@ -250,6 +250,9 @@ ngrok http 7860
 
 # extend trial windows server evaluation ( max = 6 times)
 
+
+
+
 PS> slmgr -dlv
 
 PS> slmgr -rearm
@@ -257,3 +260,12 @@ PS> slmgr -rearm
 PS> shutdown -r -t 0
 
 PS> 
+
+
+# Task to sync Time server every Startup
+
+$action = New-ScheduledTaskAction -Execute 'w32time.exe' -Argument '/resync'
+
+$trigger = New-ScheduledTaskTrigger -AtStartup
+
+Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "SyncTimeOnStartup" -User "SYSTEM" -RunLevel Highest
