@@ -269,3 +269,14 @@ $action = New-ScheduledTaskAction -Execute 'w32time.exe' -Argument '/resync'
 $trigger = New-ScheduledTaskTrigger -AtStartup
 
 Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "SyncTimeOnStartup" -User "SYSTEM" -RunLevel Highest
+
+
+
+
+# Clean-up space 
+
+dotnet nuget locals --clear all
+
+npm cache verify
+
+
