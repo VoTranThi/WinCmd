@@ -30,7 +30,9 @@ https://aka.ms/getwinget
 PS> Install-Script -Name winget-install
 PS> winget-install
 
-
+```
+Get-AppxPackage Microsoft.DesktopAppInstaller | Remove-AppxPackage
+```
 
 # install Chocolatey
 
