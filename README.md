@@ -292,6 +292,13 @@ Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "SyncTimeOnSt
 
 dotnet nuget locals --clear all
 
+----------
+wsl add --web-download
+
+e.g: wsl --update --web-download
+wsl --install --web-download -d Ubuntu
+
+
 npm cache verify
 
 
