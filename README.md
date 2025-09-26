@@ -302,3 +302,10 @@ wsl --install --web-download -d Ubuntu
 npm cache verify
 
 
+#code cli
+
+
+npm install -g @qwen-code/qwen-code@latest
+npm install -g @google/gemini-cli@latest
+npm install -g @vibe-kit/grok-cli
+npm install -g @openai/codex
