@@ -306,6 +306,11 @@ npm cache verify
 
 
 npm install -g @qwen-code/qwen-code@latest
+
 npm install -g @google/gemini-cli@latest
+
+npm install -g @github/copilot
+
 npm install -g @vibe-kit/grok-cli
+
 npm install -g @openai/codex
