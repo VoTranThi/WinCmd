@@ -314,3 +314,5 @@ npm install -g @github/copilot
 npm install -g @vibe-kit/grok-cli
 
 npm install -g @openai/codex
+
+npm install -g @anthropic-ai/claude-code
