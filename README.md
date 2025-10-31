@@ -296,6 +296,9 @@ dotnet nuget locals --clear all
 
 powercfg /batteryreport
 
+# get serialnumber 
+wmic bios get serialnumber
+
 ----------
 wsl add --web-download
 
