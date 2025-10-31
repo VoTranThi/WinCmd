@@ -292,6 +292,10 @@ Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "SyncTimeOnSt
 
 dotnet nuget locals --clear all
 
+# Batery Report
+
+powercfg /batteryreport
+
 ----------
 wsl add --web-download
 
