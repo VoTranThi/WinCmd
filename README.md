@@ -329,6 +329,9 @@ npm install -g @anthropic-ai/claude-code
 # Fixed login server to OpenAI Codex server over Plus Account
 
 Run these commands as administrator:
+
 netsh int ipv4 set dynamicport tcp start=49152 num=16384
+
 netsh int ipv6 set dynamicport tcp start=49152 num=16384
+
 *restart your computer*
