@@ -324,6 +324,14 @@ npm install -g @openai/codex
 
 npm install -g @anthropic-ai/claude-code
 
+------------------
+
+# ADD local dev cert
+
+dotnet dev-certs https --trust
+
+
+
 
 
 # Fixed login server to OpenAI Codex server over Plus Account
