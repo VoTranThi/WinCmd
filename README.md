@@ -345,6 +345,13 @@ netsh int ipv6 set dynamicport tcp start=49152 num=16384
 *restart your computer*
 
 
+# get sid 
+
+wmic useraccount get name,sid
+
+
+
+
 # Finding application  that's slow performance in statup window
 
 Get-WinEvent -LogName "Microsoft-Windows-Diagnostics-Performance/Operational" | Where-Object {$_.Id -eq 101} | Select-Object -First 1 | Format-List
