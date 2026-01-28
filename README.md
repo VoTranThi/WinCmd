@@ -355,3 +355,11 @@ wmic useraccount get name,sid
 # Finding application  that's slow performance in statup window
 
 Get-WinEvent -LogName "Microsoft-Windows-Diagnostics-Performance/Operational" | Where-Object {$_.Id -eq 101} | Select-Object -First 1 | Format-List
+
+
+# resset port keeping IISExpress
+
+netsh winsock reset
+netsh int ip reset
+
+
