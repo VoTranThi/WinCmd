@@ -362,4 +362,8 @@ Get-WinEvent -LogName "Microsoft-Windows-Diagnostics-Performance/Operational" | 
 netsh winsock reset
 netsh int ip reset
 
+# Run as another User with saved credential
+
+runas /user:DOMAIN_NAME\AdminUser /savecred "C:\path\to\your_app.exe"
+
 
