@@ -174,10 +174,15 @@ dotnet nuget locals all --clear
 
 npm cache clean --force
 
+uv cache clean
+
+ pip cache purge
+
 Remove-Item -Path "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_*" -Recurse -Force -ErrorAction SilentlyContinue
 
 
 Remove-Item -Path "$env:TEMP\*" -Force -Recurse -ErrorAction SilentlyContinue
+
 Remove-Item -Path "$env:USERPROFILE\AppData\Local\Temp\*" -Force -Recurse -ErrorAction SilentlyContinue
 
 ---------------
