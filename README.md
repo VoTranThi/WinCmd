@@ -372,3 +372,10 @@ netsh int ip reset
 runas /user:DOMAIN_NAME\AdminUser /savecred "C:\path\to\your_app.exe"
 
 
+#ip current machine
+
+https://api.ipify.org?format=json
+
+
+
+
