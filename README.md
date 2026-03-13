@@ -372,10 +372,15 @@ netsh int ip reset
 runas /user:DOMAIN_NAME\AdminUser /savecred "C:\path\to\your_app.exe"
 
 
-#ip current machine
+# ip current machine
+
 
 https://api.ipify.org?format=json
 
+# make QRcode from MS Word
 
+1. type : Displaybarcode”hello there!”QR
+2. select all > Ctrl + F9
+3. alt + F9 
 
 
