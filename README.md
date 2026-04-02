@@ -384,3 +384,7 @@ https://api.ipify.org?format=json
 3. alt + F9 
 
 
+# check SSL
+
+https://www.sslshopper.com/ssl-checker.html#hostname=votranthi.net
+
