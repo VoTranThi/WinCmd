@@ -1,4 +1,4 @@
-#Windows Toolbox 
+# Windows Toolbox 
 
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
@@ -6,29 +6,42 @@ iwr -useb https://raw.githubusercontent.com/WinTweakers/WindowsToolbox/main/run.
 
 iwr -outf C:\ET-AIO.bat https://github.com/semazurek/ET-All-in-One-Optimizer/releases/download/4.7/ET-AIO.bat | cmd /c 'C:\ET-AIO.bat'
 
-
 iwr -useb https://christitus.com/win | iex
 -------------------
-#Advance system Settings: sysdm.cpl
+
+# Advance system Settings: 
+
+sysdm.cpl
 
 -------------------
-#Install WindowsStore
+# Install WindowsStore
 
 Get-AppXPackage *WindowsStore* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}
 
-
 start ms-windows-store:full
 
-
-
 https://github.com/kkkgo/LTSC-Add-MicrosoftStore/releases/tag/2019
+
 -------------------
-#Winget Install 
+
+# Powershell 
+## upgrade : 
+
+iex "& { $(irm https://aka.ms/install-powershell.ps1) }"
+
+## install :
+
+winget install --id Microsoft.PowerShell --source winget
+
+
+# Winget Install 
+
 https://aka.ms/getwinget
 
 
-PS> Install-Script -Name winget-install
-PS> winget-install
+Install-Script -Name winget-install
+
+winget-install
 
 ```
 Get-AppxPackage Microsoft.DesktopAppInstaller | Remove-AppxPackage
@@ -43,7 +56,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 # install Scoop
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+# install SQLite
+
+winget install SQLite.SQLite
 
 
 ---------------
@@ -143,12 +161,14 @@ winget install -e --id XP8CDJNZKFM06W
 Intel.IntelDriverAndSupportAssistant
 
 ---------------
-#Hidden Apps AutoRun
+# Hidden Apps AutoRun
+
 https://www.nirsoft.net/utils/whatinstartup-x64.zip
 
 
-
 ---------------
+# Check windows components
+
 sfc /scannow
 
 DISM /Online /Cleanup-Image /CheckHealth
@@ -160,9 +180,7 @@ DISM /Online /Cleanup-Image /RestoreHealth
 
 -------------
 
-HDD Drive:
-
-defrag c:
+# Clean-up hardware drive:
 
 C:\windows\SYSTEM32\cleanmgr.exe /dC
 
@@ -173,10 +191,11 @@ dism /online /cleanup-image /startcomponentcleanup /resetbase
 dotnet nuget locals all --clear
 
 npm cache clean --force
+npm cache verify
 
 uv cache clean
 
- pip cache purge
+pip cache purge
 
 Remove-Item -Path "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_*" -Recurse -Force -ErrorAction SilentlyContinue
 
@@ -185,8 +204,10 @@ Remove-Item -Path "$env:TEMP\*" -Force -Recurse -ErrorAction SilentlyContinue
 
 Remove-Item -Path "$env:USERPROFILE\AppData\Local\Temp\*" -Force -Recurse -ErrorAction SilentlyContinue
 
+
 ---------------
 
+# trick reset window user pwd
 
 1. hold left shift key and restart pc to get to advanced menu
  and click troubleshoot, then click command prompt.
@@ -214,14 +235,14 @@ Cài win không cần usb https://www.youtube.com/watch?v=EYa7iTgb6es
 
 ------
 
-#wifi pwd
+# wifi pwd
 
 
 Check wifi password: for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear
 
 
 --------
-*Boot to Safe Mode Command Prompt*
+# Boot to Safe Mode Command Prompt
 
 bcdedit /set {default} safeboot network
 
@@ -236,15 +257,19 @@ dism /online /export-driver /destination:D:\Backup
 
 dism /online /Enable-Feature /FeatureName:TelnetClient
 
+
 telnet <Server_IP_Address> port_number
 
 
 
 ------
-Tạo file dung lượng lớn :
+# Tạo file dung lượng lớn :
+
 fsutil file createnew "D:\file100GB.dat" 107374182400
 ---------
-Backup Setting windows Apps
+
+# Backup Setting windows Apps
+
 https://github.com/builtbybel/CloneApp
 
 -------
@@ -253,7 +278,7 @@ https://github.com/builtbybel/CloneApp
 Get-ChildItem -Path "C:\path\to\your\directory" -Recurse | Where-Object { $_.LastWriteTime -gt "2024-08-14" } | Select-Object FullName
 
 --------
-#Install Cloudflared
+# Install Cloudflared
 
 winget install --id Cloudflare.cloudflared
 
@@ -270,17 +295,11 @@ ngrok http 7860
 
 # extend trial windows server evaluation ( max = 6 times)
 
+slmgr -dlv
 
+slmgr -rearm
 
-
-PS> slmgr -dlv
-
-PS> slmgr -rearm
-
-PS> shutdown -r -t 0
-
-PS> 
-
+shutdown -r -t 0
 
 # Task to sync Time server every Startup
 
@@ -291,31 +310,22 @@ $trigger = New-ScheduledTaskTrigger -AtStartup
 Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "SyncTimeOnStartup" -User "SYSTEM" -RunLevel Highest
 
 
-
-
-# Clean-up space 
-
-dotnet nuget locals --clear all
-
 # Batery Report
 
 powercfg /batteryreport
 
 # get serialnumber 
+
 wmic bios get serialnumber
 
 ----------
+# hard install WSL
 wsl add --web-download
-
 e.g: wsl --update --web-download
+
 wsl --install --web-download -d Ubuntu
 
-
-npm cache verify
-
-
-#code cli
-
+# code cli
 
 npm install -g @qwen-code/qwen-code@latest
 
@@ -335,10 +345,6 @@ npm install -g @anthropic-ai/claude-code
 
 dotnet dev-certs https --trust
 
-
-
-
-
 # Fixed login server to OpenAI Codex server over Plus Account
 
 Run these commands as administrator:
@@ -347,17 +353,15 @@ netsh int ipv4 set dynamicport tcp start=49152 num=16384
 
 netsh int ipv6 set dynamicport tcp start=49152 num=16384
 
-*restart your computer*
+shutdown -r -t 0
 
 
 # get sid 
 
+
 wmic useraccount get name,sid
 
-
-
-
-# Finding application  that's slow performance in statup window
+# Finding application that's impacted slow down performance in statup window
 
 Get-WinEvent -LogName "Microsoft-Windows-Diagnostics-Performance/Operational" | Where-Object {$_.Id -eq 101} | Select-Object -First 1 | Format-List
 
@@ -365,6 +369,7 @@ Get-WinEvent -LogName "Microsoft-Windows-Diagnostics-Performance/Operational" | 
 # resset port keeping IISExpress
 
 netsh winsock reset
+
 netsh int ip reset
 
 # Run as another User with saved credential
