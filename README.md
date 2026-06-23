@@ -393,3 +393,9 @@ https://api.ipify.org?format=json
 
 https://www.sslshopper.com/ssl-checker.html#hostname=votranthi.net
 
+# Create symbolink 
+
+New-Item -ItemType SymbolicLink -Path "C:\Users\ThiVo\AppData\Local\hermes" -Value "D:\ThiVo\ThiVT\AI\hermesAgent"
+
+
+
