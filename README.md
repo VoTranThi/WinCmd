@@ -339,6 +339,8 @@ npm install -g @openai/codex
 
 npm install -g @anthropic-ai/claude-code
 
+uv tool install mistral-vibe
+
 ------------------
 
 # ADD local dev cert
