@@ -400,4 +400,18 @@ https://www.sslshopper.com/ssl-checker.html#hostname=votranthi.net
 New-Item -ItemType SymbolicLink -Path "C:\Users\ThiVo\AppData\Local\hermes" -Value "D:\ThiVo\ThiVT\AI\hermesAgent"
 
 
+#  git update ...
+
+git status
+
+git pull origin main
+
+git fetch --all --tag
+
+git tag --sort=-creatordate | Select-Object -First 5
+
+git gc --prune=now --aggressive
+
+
+
 
