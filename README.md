@@ -399,6 +399,16 @@ https://www.sslshopper.com/ssl-checker.html#hostname=votranthi.net
 
 New-Item -ItemType SymbolicLink -Path "C:\Users\ThiVo\AppData\Local\hermes" -Value "D:\ThiVo\ThiVT\AI\hermesAgent"
 
+``` cmd
+
+mklink /D "C:\Users\ThiVo\.cache\huggingface" "E:\huggingface"
+
+mklink /D "C:\Users\ThiVo\AppData\Local\hermes" "D:\ThiVo\ThiVT\AI\hermesAgent"
+
+mklink /D "C:\Users\ThiVo\.codex" "D:\ThiVo\ThiVT\AI\.codex"
+
+```
+
 
 #  git update ...
 
