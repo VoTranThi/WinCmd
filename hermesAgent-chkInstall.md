@@ -84,3 +84,23 @@ Can thay cac thu muc nhu `chromium-*` va `chromium_headless_shell-*`.
 ```
 
 Ket qua `True` nghia la Playwright va Chromium da san sang cho Hermes.
+
+
+# CACH KHAC
+chạy cho bị lỗi 
+```powershell
+irm https://hermes-agent.nousresearch.com/install.ps1 | iex
+````
+sau đó chạy thủ công.
+```powershell
+$script = "C:\Users\ThiVo\AppData\Local\hermes\hermes-agent\scripts\install.ps1"
+$installDir = "$env:LOCALAPPDATA\hermes\hermes-agent"
+
+powershell -ExecutionPolicy Bypass -File $script -InstallDir $installDir -Stage venv
+powershell -ExecutionPolicy Bypass -File $script -InstallDir $installDir -Stage dependencies
+powershell -ExecutionPolicy Bypass -File $script -InstallDir $installDir -Stage node-deps
+powershell -ExecutionPolicy Bypass -File $script -InstallDir $installDir -Stage path
+powershell -ExecutionPolicy Bypass -File $script -InstallDir $installDir -Stage config-templates
+powershell -ExecutionPolicy Bypass -File $script -InstallDir $installDir -Stage platform-sdks
+powershell -ExecutionPolicy Bypass -File $script -InstallDir $installDir -Stage bootstrap-marker
+````
