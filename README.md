@@ -327,19 +327,17 @@ wsl --install --web-download -d Ubuntu
 
 # code cli
 
-npm install -g @qwen-code/qwen-code@latest
+irm https://antigravity.google/cli/install.ps1 | iex
 
-npm install -g @google/gemini-cli@latest
+npm install -g @openai/codex
+
+uv tool install mistral-vibe
+
+npm install -g @anthropic-ai/claude-code
 
 npm install -g @github/copilot
 
 npm install -g @vibe-kit/grok-cli
-
-npm install -g @openai/codex
-
-npm install -g @anthropic-ai/claude-code
-
-uv tool install mistral-vibe
 
 ------------------
 
