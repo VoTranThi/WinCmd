@@ -421,5 +421,7 @@ git tag --sort=-creatordate | Select-Object -First 5
 git gc --prune=now --aggressive
 
 
+# change file extension 
 
+ren *.txt *.srt
 
