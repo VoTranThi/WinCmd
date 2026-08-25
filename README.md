@@ -425,3 +425,9 @@ git gc --prune=now --aggressive
 
 ren *.txt *.srt
 
+
+# dotnet Saas template 
+
+https://github.com/fullstackhero/dotnet-starter-kit
+
+
