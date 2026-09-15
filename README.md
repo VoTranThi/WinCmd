@@ -431,3 +431,19 @@ ren *.txt *.srt
 https://github.com/fullstackhero/dotnet-starter-kit
 
 
+# kiem tra memory leak IIS
+
+Get-Process w3wp | Select-Object Id,StartTime,
+    @{N="WorkingSetGB";E={[math]::Round($_.WorkingSet64/1GB,2)}},
+    @{N="PrivateGB";E={[math]::Round($_.PrivateMemorySize64/1GB,2)}}
+	
+
+dotnet-gcdump collect -p 27084 -o D:\Temp\apiCEC.gcdump
+
+dotnet tool install --global dotnet-dump
+
+dotnet-dump collect -p 27084 --type Full -o D:\Temp\apiCEC-full.dmp
+
+dotnet-gcdump report D:\Temp\apiCEC.gcdump
+
+
