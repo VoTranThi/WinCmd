@@ -184,6 +184,8 @@ DISM /Online /Cleanup-Image /RestoreHealth
 
 C:\windows\SYSTEM32\cleanmgr.exe /dC
 
+Get-ChildItem -Path "$env:LOCALAPPDATA\Temp" -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+
 dism /online /cleanup-image /startcomponentcleanup
 
 dism /online /cleanup-image /startcomponentcleanup /resetbase
