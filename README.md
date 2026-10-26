@@ -448,4 +448,10 @@ dotnet-dump collect -p 27084 --type Full -o D:\Temp\apiCEC-full.dmp
 
 dotnet-gcdump report D:\Temp\apiCEC.gcdump
 
+# Memu đầy đủ windows 10:
+
+reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+Stop-Process -Name explorer -Force
+Start-Process explorer.exe
+
 
